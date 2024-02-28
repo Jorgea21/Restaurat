@@ -1,0 +1,442 @@
+:root{
+    --amarillo: yellow;
+    --negro: black;
+    --violeta: purple;
+    
+}
+
+/*Globales*/
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: 'Agdasima' sans-serif;
+}
+
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+  color: inherit;
+}
+
+p{
+    font-size: 1.2rem;
+}
+
+h1{
+    font-size: 3.6rem;
+}
+h2{
+    font-size: 2.4rem; 
+}
+h3{
+    font-size: 1.8rem;
+}
+h4{
+    font-size : 1rem;
+}
+
+li{
+    list-style: none;
+}
+
+.centrar-texto{
+    text-align: center;
+}
+
+.no-margin{
+    margin: 0;
+}
+
+/*Enlaces y Botones*/
+.pedido-main{
+    background-color: var(--amarillo);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: bold;    
+}
+
+/*Header*/
+.navegacion{
+    display: none;
+    font-size: 10rem;
+}
+.barra{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+   
+}
+
+.icono{
+    width: 5rem;
+    margin-top: 2rem;
+}
+.logo{
+    width: 12rem;
+    
+}
+
+.contenedor{
+    position: relative;
+    top: 1rem;
+    width: 100%;
+   
+   
+}
+
+.mostrar{
+   
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width:768px) {
+   .barra{
+   flex-direction: row;
+   justify-content: space-between;
+   
+
+    
+   }
+
+   .navegacion{ 
+    display: flex;
+    gap:2rem; 
+    margin: auto 0;
+
+    a{
+        font-size: 3rem;
+    }
+
+   }
+
+   .mobile-menu{
+    display: none;
+
+   }
+
+   .navegacion{
+    display: flex;
+    justify-content: center;
+    
+   }
+
+   .mostrar{
+    display:flex;
+    flex-direction: row;
+
+   
+   }
+ 
+}
+
+
+
+.navegacion__item{
+    
+    display: block; /*Para alinear verticalmente, con solo grid y flex se utiliza justi y aling*/
+    text-align: center; 
+    color: var(--negro);
+    font-size: 1.5rem;
+   
+    
+}
+
+.navegacion__item:hover{
+    color: var(--amarillo);
+}
+
+
+ 
+.navegacion #nav-contact{
+    background-color: yellow;
+    padding: .5rem 1rem;
+    color: var(--negro);
+    border-radius: 0.5rem;
+   
+}
+
+
+
+/* Main Principal */
+ .main-principal{
+    background: linear-gradient(to bottom, rgb(0 0 0/ .75), rgb(0 0 0 / .5)),url(/img/image3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    margin-top: 1.5rem;
+    
+}
+
+.home-page{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-home-page{
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    width: 50%;
+}
+
+.hero-home-page a{
+    color: black;
+}
+.hero-home-page p{
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .hero-home-page{
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+/*Tarjetas de Comida*/
+.section{
+    max-width: 120rem;
+    margin: 8rem auto;
+    padding: 1rem;
+}
+
+.column-4{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1rem;
+}
+
+.tarjeta-rest{
+    height: 40rem;
+    padding: 1rem .5rem;
+    border-radius: 0.6rem;
+    display: flex;
+    align-items: end;
+}
+
+
+@media (min-width: 768px) {
+    .columns{
+        display: grid;
+        grid-template-columns: repeat(4, 15%);
+        column-gap: 1rem;
+    }
+
+}
+
+.texto-rest_tarjeta-rest{
+   color: #fff;
+   background: linear-gradient(to top, rgb(0, 0, 0, .5), rgb(0, 0, 0, .5));
+   border-radius: 0.6rem;
+   padding: .5rem;
+} 
+
+.texto-rest_tarjeta-rest p{
+   color: #f2f2f2;
+}
+
+.ryg-rest_tarjeta-rest{
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--amarillo);
+    margin-left: 10rem;
+    padding: .25rem 1rem;
+    border-radius: .25rem;
+
+}
+
+.ryg-rest_tarjeta-rest a{
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+@media (max-width:1200px) {
+    .column-4{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+
+        
+    }
+
+    .ryg-rest_tarjeta-rest{
+        margin-left: 30rem;
+    }
+
+}
+
+@media (max-width:880px) {
+    .column-4{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+    .ryg-rest_tarjeta-rest{
+        margin-left: 40rem;
+    }
+}
+
+@media (max-width:640px) {
+    .column-4{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+
+    .ryg-rest_tarjeta-rest{
+        margin-left: 50rem;
+    }
+}
+
+/*Galeria*/
+
+.galeria-fotos_texto{
+    text-align: center;
+    
+}
+
+/*Menú de Carnes*/
+.widget-kilo__bold{
+    font-weight: bold;
+   
+}
+
+.informacion-carnes{
+
+    background: linear-gradient(to bottom, rgb(0, 0, 0, .5), rgb(0, 0, 0, .75));
+    padding: 2rem 0;
+    margin: 0 5rem 10rem 8rem; /*ARRIBA DERECHA ABAJO IZQUIERDA*/
+    color: white;
+    height: 40vh;
+    border-radius: 2rem;
+    width: auto;
+  
+   
+}
+
+.contains{
+    background-image: url(/img/fondoladrillo2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-size: cover;
+   
+    margin-top: -2rem;
+}
+
+
+@media (min-width: 768px) {
+  
+    .productos{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        
+        
+    }
+
+
+    .informacion-carnes{
+       display: flex;
+       flex-direction: column;
+       padding: 0 0 2rem 0;
+       margin-left: -5rem;
+    }
+
+    .contains{
+        background-image: url(/img/fondoladrillo2.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height:150vh;
+        margin-top: -2rem;
+    }
+
+    .imagen-producto img{
+       
+        height: 40vh;
+        margin: 0 0 0 -10rem;
+        
+    }
+
+}
+
+.imagen-producto img{
+
+    margin: 0 0 0 15rem; 
+    width: 40%;
+    border: 1rem solid rgba(0, 0, 0, 0.274);
+    border-radius: 1rem;
+ }
+
+
+
+.menu-titulo_carnes{
+    text-align: center;
+    color: #fff;
+    padding-top: 2rem;
+    
+}
+
+.menu-titulo_carnes{
+    margin-left: -10rem;
+    font-size: 3rem;
+}
+
+.productos{
+    color: #fff;
+    
+}
+
+
+.informacion-carnes h3{
+   font-size: 5rem;
+
+}
+
+.informacion-carnes p{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.informacion-carnes h4{
+    text-align: center;
+    font-size: 2rem;
+}
+
+/*Menu de Guarniciones*/
+
+.guarnicion{
+    height: 40vh;
+
+}
+
+.guarnicion__arepas{
+    height: 20vh;
+}
+
+
+
+
+
+
